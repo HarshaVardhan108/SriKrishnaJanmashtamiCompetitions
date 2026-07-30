@@ -86,9 +86,13 @@ function doPost(e) {
         var decodedBlob = Utilities.newBlob(Utilities.base64Decode(base64Data), contentType, fileName);
         
         var folder;
-        var folderId = getCleanFolderId(DRIVE_FOLDER_ID);
-        if (folderId !== "") {
-          folder = DriveApp.getFolderById(folderId);
+        var folderId = "1nSjC3zqlw2Da8d8CyELwOpGpobxGzWfB";
+        if (typeof DRIVE_FOLDER_ID !== "undefined" && DRIVE_FOLDER_ID) {
+          folderId = getCleanFolderId(DRIVE_FOLDER_ID);
+        }
+        
+        if (folderId && folderId.trim() !== "") {
+          folder = DriveApp.getFolderById(folderId.trim());
         } else {
           // Default to creating or retrieving a dedicated Drive folder
           var folderName = "ISKCON_Janmashtami_Payment_Screenshots";
