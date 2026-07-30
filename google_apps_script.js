@@ -42,9 +42,20 @@
  * ==============================================================================
  */
 
-// OPTIONAL: Specify Google Drive Folder ID to save screenshot files.
-// Leave as "" to save in root Drive, or paste your Folder ID: e.g. "1A2B3C4D5E6F..."
-var DRIVE_FOLDER_ID = "https://drive.google.com/drive/folders/1nSjC3zqlw2Da8d8CyELwOpGpobxGzWfB"; 
+// Google Drive Folder ID where screenshot files will be saved.
+// Folder Link: https://drive.google.com/drive/folders/1nSjC3zqlw2Da8d8CyELwOpGpobxGzWfB
+var DRIVE_FOLDER_ID = "1nSjC3zqlw2Da8d8CyELwOpGpobxGzWfB"; 
+
+// Helper function to extract Folder ID whether full URL or raw ID is provided
+function getCleanFolderId(input) {
+  if (!input || input.trim() === "") return "";
+  var clean = input.trim();
+  var match = clean.match(/folders\/([a-zA-Z0-9_-]+)/);
+  if (match && match[1]) {
+    return match[1];
+  }
+  return clean;
+}
 
 function doPost(e) {
   var lock = LockService.getScriptLock();
@@ -75,8 +86,9 @@ function doPost(e) {
         var decodedBlob = Utilities.newBlob(Utilities.base64Decode(base64Data), contentType, fileName);
         
         var folder;
-        if (DRIVE_FOLDER_ID && DRIVE_FOLDER_ID.trim() !== "") {
-          folder = DriveApp.getFolderById(DRIVE_FOLDER_ID.trim());
+        var folderId = getCleanFolderId(DRIVE_FOLDER_ID);
+        if (folderId !== "") {
+          folder = DriveApp.getFolderById(folderId);
         } else {
           // Default to creating or retrieving a dedicated Drive folder
           var folderName = "ISKCON_Janmashtami_Payment_Screenshots";
