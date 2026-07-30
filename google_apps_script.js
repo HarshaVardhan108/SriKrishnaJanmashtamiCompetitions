@@ -44,7 +44,7 @@
 
 // OPTIONAL: Specify Google Drive Folder ID to save screenshot files.
 // Leave as "" to save in root Drive, or paste your Folder ID: e.g. "1A2B3C4D5E6F..."
-var DRIVE_FOLDER_ID = ""; 
+var DRIVE_FOLDER_ID = "https://drive.google.com/drive/folders/1nSjC3zqlw2Da8d8CyELwOpGpobxGzWfB"; 
 
 function doPost(e) {
   var lock = LockService.getScriptLock();
