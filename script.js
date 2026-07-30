@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function lockSubmitButton() {
         submitBtn.disabled = true;
         lockStatusBanner.className = 'upload-status-banner locked';
-        lockStatusBanner.innerHTML = '<i class="fa-solid fa-lock"></i> <span>Form Locked! Upload Rs. 100 payment screenshot above to enable submission.</span>';
+        lockStatusBanner.innerHTML = '<i class="fa-solid fa-lock"></i> <span>Upload Rs. 100 payment screenshot.</span>';
     }
 
     // ==========================================================================
