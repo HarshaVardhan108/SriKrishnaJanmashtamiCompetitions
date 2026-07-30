@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- State Variables ---
     let screenshotBase64 = null;
     let screenshotFileName = null;
-    let appsScriptUrl = localStorage.getItem('https://script.google.com/macros/s/AKfycbw1Gz2Gmm8Xfx-XR1a0bdEecVGjjJlx2Sn4YW-aIHn9Bd6PRaJ9yX2ct2k04zFUFYCU/exec') || '';
+    const DEFAULT_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw1Gz2Gmm8Xfx-XR1a0bdEecVGjjJlx2Sn4YW-aIHn9Bd6PRaJ9yX2ct2k04zFUFYCU/exec';
+    let appsScriptUrl = localStorage.getItem('DEVOTIONAL_APPS_SCRIPT_URL') || DEFAULT_APPS_SCRIPT_URL;
 
     // --- DOM Elements ---
     const paymentForm = document.getElementById('paymentForm');
