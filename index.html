@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISKCON Tirupati - Sri Krishna Janmashtami SHYAMA Competition Registration</title>
+    <meta name="description"
+        content="Official ISKCON Tirupati Sri Krishna Janmashtami SHYAMA Drawing & Colouring Inter-School Competition Payment & Registration Portal.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Devotional Animated Background -->
+    <div class="divine-bg-overlay"></div>
+    <div class="divine-light-glow glow-1"></div>
+    <div class="divine-light-glow glow-2"></div>
+
+    <div class="main-wrapper">
+
+        <!-- Top Header Navigation -->
+        <header class="app-header">
+            <div class="iskcon-header-badge">
+                <span class="iskcon-logo-text">🪷 ISKCON TIRUPATI</span>
+                <span class="badge-subtitle">INTER SCHOOL COMPETITION</span>
+            </div>
+        </header>
+
+        <!-- Main Registration & Payment Card -->
+        <main class="payment-card">
+
+            <!-- Devotional Title Banner -->
+            <div class="card-header">
+                <div class="founder-note">
+                    <span>Founder Acharya: His Divine Grace A.C. Bhaktivedanta Swami Prabhupada</span>
+                </div>
+                <div class="title-banner">
+                    <span class="feather-left">🪶</span>
+                    <div class="header-titles">
+                        <h1 class="main-title">ISKCON TIRUPATI</h1>
+                        <h2 class="sub-main-title">SRI KRISHNA JANMASHTAMI</h2>
+                        <h3 class="event-title">SHYAMA</h3>
+                        <p class="event-tagline">DRAWING & COLOURING COMPETITIONS 2026</p>
+                    </div>
+                    <span class="feather-right">🪶</span>
+                </div>
+            </div>
+
+            <!-- Competition Levels & Highlights Strip -->
+            <div class="highlights-container">
+                <div class="highlights-grid">
+                    <div class="level-card">
+                        <span class="level-badge">LEVEL - I</span>
+                        <span class="level-classes">1st - 3rd CLASS</span>
+                        <span class="level-type">COLOURING</span>
+                    </div>
+                    <div class="level-card">
+                        <span class="level-badge">LEVEL - II</span>
+                        <span class="level-classes">4th - 7th CLASS</span>
+                        <span class="level-type">DRAWING & COLOURING</span>
+                    </div>
+                    <div class="level-card">
+                        <span class="level-badge">LEVEL - III</span>
+                        <span class="level-classes">8th - 10th CLASS</span>
+                        <span class="level-type">DRAWING & COLOURING</span>
+                    </div>
+                </div>
+
+                <div class="event-info-strip">
+                    <div class="info-pill"><i class="fa-solid fa-indian-rupee-sign"></i> <strong>Fee:</strong> Rs. 100/-
+                        per student</div>
+                    <div class="info-pill"><i class="fa-solid fa-trophy"></i> <strong>Prizes:</strong> 50+ Prizes &
+                        Certificates</div>
+                    <div class="info-pill"><i class="fa-solid fa-calendar-day"></i> <strong>Last Date:</strong> Sun, 9th
+                        AUG</div>
+                </div>
+            </div>
+
+            <div class="card-divider">
+                <span class="line"></span>
+                <span class="diya-icon">🪔</span>
+                <span class="line"></span>
+            </div>
+
+            <!-- REGISTRATION FORM -->
+            <form id="paymentForm" class="devotional-form" novalidate>
+
+                <div class="section-title">
+                    <i class="fa-solid fa-user-pen"></i>
+                    <span>Student & School Registration Details</span>
+                </div>
+
+                <div class="form-grid">
+                    <!-- Student Name -->
+                    <div class="input-group">
+                        <label for="fullName">
+                            <i class="fa-solid fa-user"></i> Name of the Student <span class="required">*</span>
+                        </label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter student's full name"
+                            required>
+                        <span class="error-msg" id="nameError">Please enter student name</span>
+                    </div>
+
+                    <!-- School Name -->
+                    <div class="input-group">
+                        <label for="schoolName">
+                            <i class="fa-solid fa-school"></i> Name of the School <span class="required">*</span>
+                        </label>
+                        <input type="text" id="schoolName" name="schoolName" placeholder="Enter school full name"
+                            required>
+                        <span class="error-msg" id="schoolError">Please enter school name</span>
+                    </div>
+
+                    <!-- Class & Section Row -->
+                    <div class="input-row">
+                        <div class="input-group flex-1">
+                            <label for="className">
+                                <i class="fa-solid fa-graduation-cap"></i> Class / Level <span class="required">*</span>
+                            </label>
+                            <select id="className" name="className" required>
+                                <option value="" disabled selected>Select Class Level</option>
+                                <optgroup label="LEVEL - I (Colouring)">
+                                    <option value="1st Class (Level I)">1st Class (Level I)</option>
+                                    <option value="2nd Class (Level I)">2nd Class (Level I)</option>
+                                    <option value="3rd Class (Level I)">3rd Class (Level I)</option>
+                                </optgroup>
+                                <optgroup label="LEVEL - II (Drawing & Colouring)">
+                                    <option value="4th Class (Level II)">4th Class (Level II)</option>
+                                    <option value="5th Class (Level II)">5th Class (Level II)</option>
+                                    <option value="6th Class (Level II)">6th Class (Level II)</option>
+                                    <option value="7th Class (Level II)">7th Class (Level II)</option>
+                                </optgroup>
+                                <optgroup label="LEVEL - III (Drawing & Colouring)">
+                                    <option value="8th Class (Level III)">8th Class (Level III)</option>
+                                    <option value="9th Class (Level III)">9th Class (Level III)</option>
+                                    <option value="10th Class (Level III)">10th Class (Level III)</option>
+                                </optgroup>
+                            </select>
+                            <span class="error-msg" id="classError">Please select class</span>
+                        </div>
+
+                        <div class="input-group flex-1">
+                            <label for="section">
+                                <i class="fa-solid fa-users"></i> Section <span class="required">*</span>
+                            </label>
+                            <input type="text" id="section" name="section" placeholder="e.g. A / B / C" required>
+                            <span class="error-msg" id="sectionError">Please enter section</span>
+                        </div>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="input-group">
+                        <label for="phone">
+                            <i class="fa-solid fa-phone"></i> Phone Number <span class="required">*</span>
+                        </label>
+                        <div class="phone-input-wrapper">
+                            <span class="country-code">+91</span>
+                            <input type="tel" id="phone" name="phone" placeholder="10-digit contact mobile number"
+                                maxlength="10" required>
+                        </div>
+                        <span class="error-msg" id="phoneError">Please enter a valid 10-digit mobile number</span>
+                    </div>
+                </div>
+
+                <!-- UPI PAYMENT QR CODE SECTION (Moved after Phone Number with Big Image) -->
+                <div class="section-title margin-top-lg">
+                    <i class="fa-solid fa-qrcode"></i>
+                    <span>Scan & Pay Registration Fee (Rs. 100/-)</span>
+                </div>
+
+                <section class="upi-section big-qr-section">
+                    <div class="qr-container centered-big-qr">
+                        <div class="qr-frame big-qr-frame">
+                            <img src="assets/QRCode.jpeg" alt="ISKCON Tirupati UPI QR Code" id="upiQrImage"
+                                onerror="this.onerror=null; this.src='https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=upi://pay?pa=iskcontirupati@upi&pn=ISKCON%20Tirupati%20Shyama%20Competition&am=100';">
+                        </div>
+
+                        <div class="upi-details big-upi-details">
+                            <div class="fee-badge">
+                                <span>Registration Fee: <strong>Rs. 100 / Student</strong></span>
+                            </div>
+                            <div class="upi-id-box">
+                                <span class="label">UPI ID:</span>
+                                <strong id="upiIdText">6305679569@ybl</strong>
+                                <button type="button" id="copyUpiBtn" class="btn-copy" title="Copy UPI ID">
+                                    <i class="fa-regular fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <p class="upi-note"><i class="fa-solid fa-shield-halved"></i> Scan QR using GPay, PhonePe, Paytm, or BHIM</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- UPLOAD SCREENSHOT SECTION -->
+                <div class="section-title margin-top-lg">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <span>Upload Payment Screenshot<span class="required">*</span></span>
+                </div>
+
+                <div class="upload-container" id="dropZone">
+                    <input type="file" id="screenshotInput" accept="image/*" class="file-input-hidden" required>
+
+                    <div class="upload-placeholder" id="uploadPlaceholder">
+                        <div class="upload-icon-circle">
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                        <p class="upload-title">Click or Drag & Drop Payment Screenshot</p>
+                       
+                        <button type="button" class="btn-browse"
+                            onclick="document.getElementById('screenshotInput').click()">
+                            <i class="fa-solid fa-folder-open"></i> Select Screenshot File
+                        </button>
+                    </div>
+
+                    <!-- Live Image Preview Container -->
+                    <div class="image-preview-wrapper hidden" id="previewWrapper">
+                        <img id="imagePreview" src="" alt="Payment Screenshot Preview">
+                        <div class="preview-overlay">
+                            <span class="preview-filename" id="previewFilename">screenshot.png</span>
+                            <button type="button" id="removeImageBtn" class="btn-remove-img" title="Remove Screenshot">
+                                <i class="fa-solid fa-trash-can"></i> Change Screenshot
+                            </button>
+                        </div>
+                        <div class="preview-badge">
+                            <i class="fa-solid fa-circle-check"></i> Screenshot Uploaded Successfully
+                        </div>
+                    </div>
+                </div>
+                <span class="error-msg upload-error" id="uploadError">Upload payment screenshot is mandatory to submit
+                    registration!</span>
+
+                <!-- SUBMIT BUTTON WITH LOCK / UNLOCK BANNER -->
+                <div class="submit-wrapper">
+                    <div class="upload-status-banner locked" id="lockStatusBanner">
+                        <i class="fa-solid fa-lock"></i>
+                        <span>Please upload payment screenshot.</span>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="btn-submit" disabled>
+                        <span class="btn-text">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Registration & Payment Data
+                        </span>
+                        <span class="btn-spinner hidden" id="btnSpinner">
+                            <i class="fa-solid fa-om fa-spin"></i> Submitting to ISKCON Tirupati Database...
+                        </span>
+                    </button>
+                </div>
+
+            </form>
+
+            <!-- Event Contact & Footer Info -->
+            <footer class="card-footer">
+                <div class="contact-box">
+                    <span><i class="fa-solid fa-phone"></i> Helpline Contact: <strong>6303486182</strong></span>
+                    <span><i class="fa-solid fa-location-dot"></i> Venue: Respective Schools & ISKCON Temple
+                        Grounds</span>
+                </div>
+                <p class="motto">"LET'S CELEBRATE THE DIVINE LEELA OF THE LORD THROUGH ART & DEVOTION!"</p>
+                <p class="sub-footer">ISKCON Tirupati • Sri Krishna Janmashtami SHYAMA 2026</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- GOOGLE APPS SCRIPT CONFIG MODAL -->
+    <div class="modal-backdrop hidden" id="configModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-file-csv"></i> Google Sheets Web App Setup</h3>
+                <button type="button" class="btn-close-modal" id="closeConfigBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-info">
+                    Paste your deployed <strong>Google Apps Script Web App URL</strong> below. Registration details &
+                    screenshots will be stored automatically in your Google Sheet & Drive!
+                </p>
+                <div class="input-group">
+                    <label for="appsScriptUrlInput">Google Apps Script Web App URL:</label>
+                    <input type="url" id="appsScriptUrlInput"
+                        placeholder="https://script.google.com/macros/s/AKfycb.../exec">
+                </div>
+                <div class="setup-guide-box">
+                    <h4><i class="fa-solid fa-book"></i> Setup Guide:</h4>
+                    <ol>
+                        <li>Open your Google Sheet & click <code>Extensions</code> &rarr; <code>Apps Script</code>.</li>
+                        <li>Copy code from <code>google_apps_script.js</code> file into the script editor.</li>
+                        <li>Click <code>Deploy</code> &rarr; <code>New deployment</code> &rarr; Select
+                            <code>Web App</code>.</li>
+                        <li>Set <strong>Execute as:</strong> <code>Me</code> and <strong>Who has access:</strong>
+                            <code>Anyone</code>.</li>
+                        <li>Copy the Web App URL & paste it in the field above!</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-secondary" id="cancelConfigBtn">Cancel</button>
+                <button type="button" class="btn-primary" id="saveConfigBtn"><i class="fa-solid fa-floppy-disk"></i>
+                    Save URL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUCCESS CONFIRMATION MODAL -->
+    <div class="modal-backdrop hidden" id="successModal">
+        <div class="modal-card success-card">
+            <div class="success-icon-wrap">
+                <div class="lotus-glow">🪷</div>
+                <i class="fa-solid fa-circle-check success-check"></i>
+            </div>
+            <h2>Hare Krishna! Registration Successful</h2>
+            <p class="success-msg">Your details and payment screenshot have been submitted to ISKCON Tirupati.</p>
+
+            <div class="summary-box">
+                <div class="summary-row"><span>Student Name:</span> <strong id="sumName">-</strong></div>
+                <div class="summary-row"><span>School Name:</span> <strong id="sumSchool">-</strong></div>
+                <div class="summary-row"><span>Class & Section:</span> <strong id="sumClassSection">-</strong></div>
+                <div class="summary-row"><span>Phone Number:</span> <strong id="sumPhone">-</strong></div>
+                <div class="summary-row"><span>Registration Fee:</span> <strong class="text-gold">Rs. 100/-
+                        Paid</strong></div>
+                <div class="summary-row"><span>Payment Proof:</span> <strong class="text-success"><i
+                            class="fa-solid fa-check"></i> Screenshot Attached</strong></div>
+            </div>
+
+            <button type="button" class="btn-primary btn-block" id="closeSuccessBtn">
+                <i class="fa-solid fa-check"></i> Done
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast hidden" id="toast">
+        <i class="fa-solid fa-circle-info" id="toastIcon"></i>
+        <span id="toastMsg">Notification message</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
